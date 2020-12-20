@@ -5,7 +5,7 @@ import SwiftUI
 struct ContentView: View {
     @GestureState private var dragState = DragState.inactive
 
-    var images = ["a94", "ad9"].compactMap{ UIImage(named: $0) }
+    @State var images = ["a94", "ad9"].compactMap{ UIImage(named: $0) }
     var body: some View {
         ZStack {
             ForEach(images, id: \.self) { image in
@@ -24,13 +24,31 @@ struct ContentView: View {
                     )
                     .zIndex(isTop(image) ? 1 : 0)
                     .offset(x: isTop(image) ? dragState.translation.width : 0)
+                    .scaleEffect(isTop(image) && dragState.isDragging ? 0.95 : 1.0)
                     .rotationEffect(.degrees(isTop(image) ? Double(dragState.translation.width / 20) : 0))
                     .animation(.easeInOut)
-                    .gesture(DragGesture()
-                                .updating(self.$dragState, body: { (value, state, transaction) in
-                                    state = .dragging(translation: value.translation)
-                                }))
-
+                    .gesture(
+                        LongPressGesture(minimumDuration: 0.01)
+                            .sequenced(before: DragGesture())
+                            .updating(self.$dragState, body: { (value, state, transaction) in
+                                switch value {
+                                case .first(true):
+                                    state = .pressing
+                                case .second(true, let drag):
+                                    state = .dragging(translation: drag?.translation ?? .zero)
+                                default:
+                                    break
+                                }
+                            })
+                            .onEnded({ value in
+                                guard case .second(true, let drag?) = value else {
+                                    return
+                                }
+                                if abs(Double(drag.translation.width)) > 80 {
+                                    removeCard()
+                                }
+                            })
+                    )
             }
         }
         .padding()
@@ -38,6 +56,10 @@ struct ContentView: View {
 
     private func isTop(_ image: UIImage) -> Bool {
         images.first == image
+    }
+
+    private func removeCard() {
+        images.removeFirst()
     }
 }
 
