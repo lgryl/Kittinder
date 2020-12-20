@@ -26,6 +26,7 @@ struct ContentView: View {
                     .offset(x: isTop(image) ? dragState.translation.width : 0)
                     .scaleEffect(isTop(image) && dragState.isDragging ? 0.95 : 1.0)
                     .rotationEffect(.degrees(isTop(image) ? Double(dragState.translation.width / 20) : 0))
+                    .transition(dragState.translation.width > 0 ? .slideTrailingBottom : .slideLeadingBottom)
                     .animation(.easeInOut)
                     .gesture(
                         LongPressGesture(minimumDuration: 0.01)

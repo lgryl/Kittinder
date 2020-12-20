@@ -13,6 +13,7 @@
 		CB203D84258F5B5900DF1BBD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB203D83258F5B5900DF1BBD /* Preview Assets.xcassets */; };
 		CB203D91258F5C4200DF1BBD /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB203D90258F5C4200DF1BBD /* CardView.swift */; };
 		CB203D94258F5FCF00DF1BBD /* DragState.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB203D93258F5FCF00DF1BBD /* DragState.swift */; };
+		CB203D97258F6A9400DF1BBD /* SlideTransitions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB203D96258F6A9400DF1BBD /* SlideTransitions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		CB203D85258F5B5900DF1BBD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CB203D90258F5C4200DF1BBD /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		CB203D93258F5FCF00DF1BBD /* DragState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragState.swift; sourceTree = "<group>"; };
+		CB203D96258F6A9400DF1BBD /* SlideTransitions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideTransitions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				CB203D82258F5B5900DF1BBD /* Preview Content */,
 				CB203D90258F5C4200DF1BBD /* CardView.swift */,
 				CB203D93258F5FCF00DF1BBD /* DragState.swift */,
+				CB203D96258F6A9400DF1BBD /* SlideTransitions.swift */,
 			);
 			path = Kittinder;
 			sourceTree = "<group>";
@@ -144,6 +147,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB203D97258F6A9400DF1BBD /* SlideTransitions.swift in Sources */,
 				CB203D7F258F5B5600DF1BBD /* ContentView.swift in Sources */,
 				CB203D94258F5FCF00DF1BBD /* DragState.swift in Sources */,
 				CB203D91258F5C4200DF1BBD /* CardView.swift in Sources */,
