@@ -14,6 +14,7 @@
 		CB203D91258F5C4200DF1BBD /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB203D90258F5C4200DF1BBD /* CardView.swift */; };
 		CB203D94258F5FCF00DF1BBD /* DragState.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB203D93258F5FCF00DF1BBD /* DragState.swift */; };
 		CB203D97258F6A9400DF1BBD /* SlideTransitions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB203D96258F6A9400DF1BBD /* SlideTransitions.swift */; };
+		CBE4C5E62591049100BF9F4A /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE4C5E52591049100BF9F4A /* ViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		CB203D90258F5C4200DF1BBD /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		CB203D93258F5FCF00DF1BBD /* DragState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragState.swift; sourceTree = "<group>"; };
 		CB203D96258F6A9400DF1BBD /* SlideTransitions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideTransitions.swift; sourceTree = "<group>"; };
+		CBE4C5E52591049100BF9F4A /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				CB203D90258F5C4200DF1BBD /* CardView.swift */,
 				CB203D93258F5FCF00DF1BBD /* DragState.swift */,
 				CB203D96258F6A9400DF1BBD /* SlideTransitions.swift */,
+				CBE4C5E52591049100BF9F4A /* ViewModel.swift */,
 			);
 			path = Kittinder;
 			sourceTree = "<group>";
@@ -151,6 +154,7 @@
 				CB203D7F258F5B5600DF1BBD /* ContentView.swift in Sources */,
 				CB203D94258F5FCF00DF1BBD /* DragState.swift in Sources */,
 				CB203D91258F5C4200DF1BBD /* CardView.swift in Sources */,
+				CBE4C5E62591049100BF9F4A /* ViewModel.swift in Sources */,
 				CB203D7D258F5B5600DF1BBD /* KittinderApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

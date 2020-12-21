@@ -3,15 +3,15 @@
 import SwiftUI
 
 struct ContentView: View {
+    @ObservedObject private var viewModel = ViewModel()
     @GestureState private var dragState = DragState.inactive
 
-    @State var images = ["a94", "ad9"].compactMap{ UIImage(named: $0) }
     var body: some View {
         ZStack {
-            if images.isEmpty {
+            if viewModel.images.isEmpty {
                 ProgressView()
             }
-            ForEach(images, id: \.self) { image in
+            ForEach(viewModel.images, id: \.self) { image in
                 CardView(image: image)
                     .overlay(
                         ZStack {
@@ -59,11 +59,11 @@ struct ContentView: View {
     }
 
     private func isTop(_ image: UIImage) -> Bool {
-        images.first == image
+        viewModel.images.first == image
     }
 
     private func removeCard() {
-        images.removeFirst()
+        viewModel.images.removeFirst()
     }
 }
 
