@@ -15,6 +15,7 @@
 		CB203D94258F5FCF00DF1BBD /* DragState.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB203D93258F5FCF00DF1BBD /* DragState.swift */; };
 		CB203D97258F6A9400DF1BBD /* SlideTransitions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB203D96258F6A9400DF1BBD /* SlideTransitions.swift */; };
 		CBE4C5E62591049100BF9F4A /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE4C5E52591049100BF9F4A /* ViewModel.swift */; };
+		CBE4C5E9259105AD00BF9F4A /* NetworkProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE4C5E8259105AD00BF9F4A /* NetworkProvider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		CB203D93258F5FCF00DF1BBD /* DragState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragState.swift; sourceTree = "<group>"; };
 		CB203D96258F6A9400DF1BBD /* SlideTransitions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideTransitions.swift; sourceTree = "<group>"; };
 		CBE4C5E52591049100BF9F4A /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		CBE4C5E8259105AD00BF9F4A /* NetworkProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkProvider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 				CB203D93258F5FCF00DF1BBD /* DragState.swift */,
 				CB203D96258F6A9400DF1BBD /* SlideTransitions.swift */,
 				CBE4C5E52591049100BF9F4A /* ViewModel.swift */,
+				CBE4C5E8259105AD00BF9F4A /* NetworkProvider.swift */,
 			);
 			path = Kittinder;
 			sourceTree = "<group>";
@@ -150,6 +153,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CBE4C5E9259105AD00BF9F4A /* NetworkProvider.swift in Sources */,
 				CB203D97258F6A9400DF1BBD /* SlideTransitions.swift in Sources */,
 				CB203D7F258F5B5600DF1BBD /* ContentView.swift in Sources */,
 				CB203D94258F5FCF00DF1BBD /* DragState.swift in Sources */,
