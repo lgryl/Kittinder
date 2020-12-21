@@ -8,6 +8,9 @@ struct ContentView: View {
     @State var images = ["a94", "ad9"].compactMap{ UIImage(named: $0) }
     var body: some View {
         ZStack {
+            if images.isEmpty {
+                ProgressView()
+            }
             ForEach(images, id: \.self) { image in
                 CardView(image: image)
                     .overlay(
