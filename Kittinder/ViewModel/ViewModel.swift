@@ -10,7 +10,10 @@ class ViewModel: ObservableObject {
     private let voteService = VoteService()
 
     func removeTopCard(like: Bool) {
-        vote(imageID: catsBuffer[0].cat.id, like: like)
+        guard let topCatData = catsBuffer.first else { return }
+        print(images)
+        print(catsBuffer)
+        vote(imageID: topCatData.cat.id, like: like)
         removeTopImageFromBuffers()
         if catsBuffer.count < 5 {
             fetch(numberOfCats: 10)
