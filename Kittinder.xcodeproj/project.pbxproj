@@ -8,12 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		CB203D7D258F5B5600DF1BBD /* KittinderApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB203D7C258F5B5600DF1BBD /* KittinderApp.swift */; };
-		CB203D7F258F5B5600DF1BBD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB203D7E258F5B5600DF1BBD /* ContentView.swift */; };
+		CB203D7F258F5B5600DF1BBD /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB203D7E258F5B5600DF1BBD /* MainView.swift */; };
 		CB203D81258F5B5900DF1BBD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB203D80258F5B5900DF1BBD /* Assets.xcassets */; };
 		CB203D84258F5B5900DF1BBD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB203D83258F5B5900DF1BBD /* Preview Assets.xcassets */; };
 		CB203D91258F5C4200DF1BBD /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB203D90258F5C4200DF1BBD /* CardView.swift */; };
 		CB203D94258F5FCF00DF1BBD /* DragState.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB203D93258F5FCF00DF1BBD /* DragState.swift */; };
 		CB203D97258F6A9400DF1BBD /* SlideTransitions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB203D96258F6A9400DF1BBD /* SlideTransitions.swift */; };
+		CB547EDA259B276500F3245A /* NoCardsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB547ED9259B276500F3245A /* NoCardsView.swift */; };
+		CB547EE1259B27E700F3245A /* CardsStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB547EE0259B27E700F3245A /* CardsStackView.swift */; };
 		CBE4C5E62591049100BF9F4A /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE4C5E52591049100BF9F4A /* ViewModel.swift */; };
 		CBE4C5E9259105AD00BF9F4A /* NetworkProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE4C5E8259105AD00BF9F4A /* NetworkProvider.swift */; };
 		CBE4C5ED259108F400BF9F4A /* AsynchronousOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE4C5EC259108F400BF9F4A /* AsynchronousOperation.swift */; };
@@ -27,13 +29,15 @@
 /* Begin PBXFileReference section */
 		CB203D79258F5B5600DF1BBD /* Kittinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kittinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB203D7C258F5B5600DF1BBD /* KittinderApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KittinderApp.swift; sourceTree = "<group>"; };
-		CB203D7E258F5B5600DF1BBD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		CB203D7E258F5B5600DF1BBD /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		CB203D80258F5B5900DF1BBD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CB203D83258F5B5900DF1BBD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		CB203D85258F5B5900DF1BBD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CB203D90258F5C4200DF1BBD /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		CB203D93258F5FCF00DF1BBD /* DragState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragState.swift; sourceTree = "<group>"; };
 		CB203D96258F6A9400DF1BBD /* SlideTransitions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideTransitions.swift; sourceTree = "<group>"; };
+		CB547ED9259B276500F3245A /* NoCardsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoCardsView.swift; sourceTree = "<group>"; };
+		CB547EE0259B27E700F3245A /* CardsStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsStackView.swift; sourceTree = "<group>"; };
 		CBE4C5E52591049100BF9F4A /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		CBE4C5E8259105AD00BF9F4A /* NetworkProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkProvider.swift; sourceTree = "<group>"; };
 		CBE4C5EC259108F400BF9F4A /* AsynchronousOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsynchronousOperation.swift; sourceTree = "<group>"; };
@@ -74,19 +78,13 @@
 		CB203D7B258F5B5600DF1BBD /* Kittinder */ = {
 			isa = PBXGroup;
 			children = (
-				CBE4C60025910AB100BF9F4A /* APIKey.xcconfig */,
-				CBE4C5F22591092900BF9F4A /* Model */,
-				CBE4C5EB259108DF00BF9F4A /* Operations */,
 				CB203D7C258F5B5600DF1BBD /* KittinderApp.swift */,
-				CB203D7E258F5B5600DF1BBD /* ContentView.swift */,
-				CB203D80258F5B5900DF1BBD /* Assets.xcassets */,
-				CB203D85258F5B5900DF1BBD /* Info.plist */,
-				CB203D82258F5B5900DF1BBD /* Preview Content */,
-				CB203D90258F5C4200DF1BBD /* CardView.swift */,
-				CB203D93258F5FCF00DF1BBD /* DragState.swift */,
-				CB203D96258F6A9400DF1BBD /* SlideTransitions.swift */,
-				CBE4C5E52591049100BF9F4A /* ViewModel.swift */,
-				CBE4C5E8259105AD00BF9F4A /* NetworkProvider.swift */,
+				CB547ED4259B26A000F3245A /* View */,
+				CBE4C5F22591092900BF9F4A /* Model */,
+				CB547EE6259B296700F3245A /* ViewModel */,
+				CBE4C5EB259108DF00BF9F4A /* Operations */,
+				CB547EE5259B295700F3245A /* Providers */,
+				CB547EE7259B298200F3245A /* Assets */,
 			);
 			path = Kittinder;
 			sourceTree = "<group>";
@@ -97,6 +95,54 @@
 				CB203D83258F5B5900DF1BBD /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		CB547ED4259B26A000F3245A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CB203D7E258F5B5600DF1BBD /* MainView.swift */,
+				CB547EE0259B27E700F3245A /* CardsStackView.swift */,
+				CB203D90258F5C4200DF1BBD /* CardView.swift */,
+				CB547ED9259B276500F3245A /* NoCardsView.swift */,
+				CB547EE4259B294400F3245A /* Helpers */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CB547EE4259B294400F3245A /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				CB203D93258F5FCF00DF1BBD /* DragState.swift */,
+				CB203D96258F6A9400DF1BBD /* SlideTransitions.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		CB547EE5259B295700F3245A /* Providers */ = {
+			isa = PBXGroup;
+			children = (
+				CBE4C5E8259105AD00BF9F4A /* NetworkProvider.swift */,
+			);
+			path = Providers;
+			sourceTree = "<group>";
+		};
+		CB547EE6259B296700F3245A /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				CBE4C5E52591049100BF9F4A /* ViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		CB547EE7259B298200F3245A /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				CBE4C60025910AB100BF9F4A /* APIKey.xcconfig */,
+				CB203D80258F5B5900DF1BBD /* Assets.xcassets */,
+				CB203D85258F5B5900DF1BBD /* Info.plist */,
+				CB203D82258F5B5900DF1BBD /* Preview Content */,
+			);
+			path = Assets;
 			sourceTree = "<group>";
 		};
 		CBE4C5EB259108DF00BF9F4A /* Operations */ = {
@@ -191,7 +237,8 @@
 				CBE4C5E9259105AD00BF9F4A /* NetworkProvider.swift in Sources */,
 				CB203D97258F6A9400DF1BBD /* SlideTransitions.swift in Sources */,
 				CBE4C5F42591092F00BF9F4A /* Cat.swift in Sources */,
-				CB203D7F258F5B5600DF1BBD /* ContentView.swift in Sources */,
+				CB547EDA259B276500F3245A /* NoCardsView.swift in Sources */,
+				CB203D7F258F5B5600DF1BBD /* MainView.swift in Sources */,
 				CBE4C60825910EC300BF9F4A /* FetchImageOperation.swift in Sources */,
 				CBE4C60B2591127900BF9F4A /* GroupImagesOperation.swift in Sources */,
 				CBE4C5ED259108F400BF9F4A /* AsynchronousOperation.swift in Sources */,
@@ -200,6 +247,7 @@
 				CB203D91258F5C4200DF1BBD /* CardView.swift in Sources */,
 				CBE4C5E62591049100BF9F4A /* ViewModel.swift in Sources */,
 				CB203D7D258F5B5600DF1BBD /* KittinderApp.swift in Sources */,
+				CB547EE1259B27E700F3245A /* CardsStackView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -330,10 +378,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"Kittinder/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Kittinder/Assets/Preview Content\"";
 				DEVELOPMENT_TEAM = 5667E7L429;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = Kittinder/Info.plist;
+				INFOPLIST_FILE = Kittinder/Assets/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -352,10 +400,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"Kittinder/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Kittinder/Assets/Preview Content\"";
 				DEVELOPMENT_TEAM = 5667E7L429;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = Kittinder/Info.plist;
+				INFOPLIST_FILE = Kittinder/Assets/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

@@ -11,20 +11,21 @@ class ViewModel: ObservableObject {
     private var imageBuffer: [UIImage] = []
 
     func removeTopCard() {
-        removeTop()
+        removeTopImageFromBuffers()
         if imageBuffer.count < 5 {
-            fetchIfNotFetching()
+            loadMoreImages()
         }
     }
 
-    func fetchIfNotFetching() {
+    func loadMoreImages() {
         guard !isFetching else { return }
         fetch()
     }
 
     private func fetch() {
         isFetching = true
-        let fetchCatsOperation = FetchCatsOperation(networkProvider: networkProvider)
+        let fetchCatsOperation = FetchCatsOperation(apiKey: self.apiKey,
+                                                    networkProvider: networkProvider)
         fetchCatsOperation.completionBlock = { [weak self, unowned fetchCatsOperation] in
             guard let self = self else { return }
             let groupImagesOperation = GroupImagesOperation()
@@ -46,7 +47,7 @@ class ViewModel: ObservableObject {
         queue.addOperation(fetchCatsOperation)
     }
 
-    private func removeTop() {
+    private func removeTopImageFromBuffers() {
         if !imageBuffer.isEmpty {
             imageBuffer.removeFirst()
         }
@@ -65,5 +66,9 @@ class ViewModel: ObservableObject {
                 images.append(imageBuffer[i])
             }
         }
+    }
+
+    private var apiKey: String {
+        Bundle.main.object(forInfoDictionaryKey: "API_KEY") as! String
     }
 }

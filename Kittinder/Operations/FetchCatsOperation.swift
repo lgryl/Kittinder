@@ -3,18 +3,26 @@
 import Foundation
 
 class FetchCatsOperation: AsynchronousOperation {
+    private static let defaultNumberOfCatsToFetch = 10
+
     private let networkProvider: NetworkProvider
 
-    init(networkProvider: NetworkProvider) {
-        self.networkProvider = networkProvider
-    }
+    private let apiKey: String
+    private let numberOfCatsToFetch: Int
 
     var cats: [Cat] = []
 
+    init(apiKey: String,
+         numberOfCatsToFetch: Int = FetchCatsOperation.defaultNumberOfCatsToFetch,
+         networkProvider: NetworkProvider) {
+        self.apiKey = apiKey
+        self.numberOfCatsToFetch = numberOfCatsToFetch
+        self.networkProvider = networkProvider
+    }
+
     override func main() {
-        let url = URL(string: "https://api.thecatapi.com/v1/images/search?limit=10&mime_types=jpg%2Cpng&size=med")!
+        let url = URL(string: "https://api.thecatapi.com/v1/images/search?limit=\(numberOfCatsToFetch)&mime_types=jpg%2Cpng&size=med")!
         var request = URLRequest(url: url)
-        let apiKey = Bundle.main.object(forInfoDictionaryKey: "API_KEY") as! String
         request.addValue(apiKey, forHTTPHeaderField: "x-api-key")
 
         networkProvider.fetch(request: request) { result in

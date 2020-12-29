@@ -6,7 +6,7 @@ import SwiftUI
 struct KittinderApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MainView(viewModel: ViewModel())
         }
     }
 }

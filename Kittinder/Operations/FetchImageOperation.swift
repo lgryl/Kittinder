@@ -25,6 +25,5 @@ class FetchImageOperation: AsynchronousOperation {
                 print(error)
             }
         }
-
     }
 }
