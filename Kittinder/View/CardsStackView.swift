@@ -44,8 +44,10 @@ struct CardsStackView: View {
                             guard case .second(true, let drag?) = value else {
                                 return
                             }
-                            if abs(Double(drag.translation.width)) > 80 {
-                                removeCard()
+                            if drag.translation.width > 80 {
+                                removeCard(like: true)
+                            } else if drag.translation.width < -80 {
+                                removeCard(like: false)
                             }
                         })
                 )
@@ -56,8 +58,8 @@ struct CardsStackView: View {
         viewModel.images.first == image
     }
 
-    private func removeCard() {
-        viewModel.removeTopCard()
+    private func removeCard(like: Bool) {
+        viewModel.removeTopCard(like: like)
     }
 }
 

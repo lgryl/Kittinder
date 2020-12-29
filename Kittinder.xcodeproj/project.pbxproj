@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CB066EDD259B63D000634E2F /* CatData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB066EDC259B63D000634E2F /* CatData.swift */; };
+		CB066EE0259B65EB00634E2F /* CatsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB066EDF259B65EB00634E2F /* CatsProvider.swift */; };
+		CB066EE3259B734E00634E2F /* VoteService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB066EE2259B734E00634E2F /* VoteService.swift */; };
 		CB203D7D258F5B5600DF1BBD /* KittinderApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB203D7C258F5B5600DF1BBD /* KittinderApp.swift */; };
 		CB203D7F258F5B5600DF1BBD /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB203D7E258F5B5600DF1BBD /* MainView.swift */; };
 		CB203D81258F5B5900DF1BBD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB203D80258F5B5900DF1BBD /* Assets.xcassets */; };
@@ -16,6 +19,8 @@
 		CB203D97258F6A9400DF1BBD /* SlideTransitions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB203D96258F6A9400DF1BBD /* SlideTransitions.swift */; };
 		CB547EDA259B276500F3245A /* NoCardsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB547ED9259B276500F3245A /* NoCardsView.swift */; };
 		CB547EE1259B27E700F3245A /* CardsStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB547EE0259B27E700F3245A /* CardsStackView.swift */; };
+		CB9EFAB9259B2E9F001DEAEE /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9EFAB8259B2E9F001DEAEE /* HTTPMethod.swift */; };
+		CB9EFABF259B30CF001DEAEE /* Vote.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9EFABE259B30CF001DEAEE /* Vote.swift */; };
 		CBE4C5E62591049100BF9F4A /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE4C5E52591049100BF9F4A /* ViewModel.swift */; };
 		CBE4C5E9259105AD00BF9F4A /* NetworkProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE4C5E8259105AD00BF9F4A /* NetworkProvider.swift */; };
 		CBE4C5ED259108F400BF9F4A /* AsynchronousOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE4C5EC259108F400BF9F4A /* AsynchronousOperation.swift */; };
@@ -27,6 +32,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CB066EDC259B63D000634E2F /* CatData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatData.swift; sourceTree = "<group>"; };
+		CB066EDF259B65EB00634E2F /* CatsProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatsProvider.swift; sourceTree = "<group>"; };
+		CB066EE2259B734E00634E2F /* VoteService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoteService.swift; sourceTree = "<group>"; };
 		CB203D79258F5B5600DF1BBD /* Kittinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kittinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB203D7C258F5B5600DF1BBD /* KittinderApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KittinderApp.swift; sourceTree = "<group>"; };
 		CB203D7E258F5B5600DF1BBD /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -38,6 +46,8 @@
 		CB203D96258F6A9400DF1BBD /* SlideTransitions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideTransitions.swift; sourceTree = "<group>"; };
 		CB547ED9259B276500F3245A /* NoCardsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoCardsView.swift; sourceTree = "<group>"; };
 		CB547EE0259B27E700F3245A /* CardsStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsStackView.swift; sourceTree = "<group>"; };
+		CB9EFAB8259B2E9F001DEAEE /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
+		CB9EFABE259B30CF001DEAEE /* Vote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vote.swift; sourceTree = "<group>"; };
 		CBE4C5E52591049100BF9F4A /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		CBE4C5E8259105AD00BF9F4A /* NetworkProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkProvider.swift; sourceTree = "<group>"; };
 		CBE4C5EC259108F400BF9F4A /* AsynchronousOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsynchronousOperation.swift; sourceTree = "<group>"; };
@@ -83,8 +93,9 @@
 				CBE4C5F22591092900BF9F4A /* Model */,
 				CB547EE6259B296700F3245A /* ViewModel */,
 				CBE4C5EB259108DF00BF9F4A /* Operations */,
-				CB547EE5259B295700F3245A /* Providers */,
+				CB547EE5259B295700F3245A /* Network */,
 				CB547EE7259B298200F3245A /* Assets */,
+				CB066EDF259B65EB00634E2F /* CatsProvider.swift */,
 			);
 			path = Kittinder;
 			sourceTree = "<group>";
@@ -118,18 +129,20 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
-		CB547EE5259B295700F3245A /* Providers */ = {
+		CB547EE5259B295700F3245A /* Network */ = {
 			isa = PBXGroup;
 			children = (
 				CBE4C5E8259105AD00BF9F4A /* NetworkProvider.swift */,
+				CB9EFAB8259B2E9F001DEAEE /* HTTPMethod.swift */,
 			);
-			path = Providers;
+			path = Network;
 			sourceTree = "<group>";
 		};
 		CB547EE6259B296700F3245A /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
 				CBE4C5E52591049100BF9F4A /* ViewModel.swift */,
+				CB066EE2259B734E00634E2F /* VoteService.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -160,6 +173,8 @@
 			isa = PBXGroup;
 			children = (
 				CBE4C5F32591092F00BF9F4A /* Cat.swift */,
+				CB9EFABE259B30CF001DEAEE /* Vote.swift */,
+				CB066EDC259B63D000634E2F /* CatData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -235,15 +250,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				CBE4C5E9259105AD00BF9F4A /* NetworkProvider.swift in Sources */,
+				CB066EE0259B65EB00634E2F /* CatsProvider.swift in Sources */,
 				CB203D97258F6A9400DF1BBD /* SlideTransitions.swift in Sources */,
+				CB066EE3259B734E00634E2F /* VoteService.swift in Sources */,
 				CBE4C5F42591092F00BF9F4A /* Cat.swift in Sources */,
 				CB547EDA259B276500F3245A /* NoCardsView.swift in Sources */,
 				CB203D7F258F5B5600DF1BBD /* MainView.swift in Sources */,
 				CBE4C60825910EC300BF9F4A /* FetchImageOperation.swift in Sources */,
 				CBE4C60B2591127900BF9F4A /* GroupImagesOperation.swift in Sources */,
 				CBE4C5ED259108F400BF9F4A /* AsynchronousOperation.swift in Sources */,
+				CB066EDD259B63D000634E2F /* CatData.swift in Sources */,
+				CB9EFAB9259B2E9F001DEAEE /* HTTPMethod.swift in Sources */,
 				CBE4C5F02591091C00BF9F4A /* FetchCatsOperation.swift in Sources */,
 				CB203D94258F5FCF00DF1BBD /* DragState.swift in Sources */,
+				CB9EFABF259B30CF001DEAEE /* Vote.swift in Sources */,
 				CB203D91258F5C4200DF1BBD /* CardView.swift in Sources */,
 				CBE4C5E62591049100BF9F4A /* ViewModel.swift in Sources */,
 				CB203D7D258F5B5600DF1BBD /* KittinderApp.swift in Sources */,

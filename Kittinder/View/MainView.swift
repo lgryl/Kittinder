@@ -14,7 +14,7 @@ struct MainView: View {
         }
         .padding()
         .onAppear {
-            viewModel.loadMoreImages()
+            viewModel.loadMoreCats()
         }
     }
 }

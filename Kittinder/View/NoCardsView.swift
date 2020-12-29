@@ -10,7 +10,7 @@ struct NoCardsView: View {
             ProgressView()
         } else {
             Button(action: {
-                viewModel.loadMoreImages()
+                viewModel.loadMoreCats()
             }, label: {
                 Text("Load more")
             })

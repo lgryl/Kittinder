@@ -3,53 +3,41 @@
 import UIKit
 
 class ViewModel: ObservableObject {
-    private let queue = OperationQueue()
-    private let networkProvider = NetworkProvider()
-
     @Published private(set) var isFetching = false
     @Published private(set) var images: [UIImage] = []
-    private var imageBuffer: [UIImage] = []
+    private var catsBuffer: [CatData] = []
+    private let catsProvider = CatsProvider()
+    private let voteService = VoteService()
 
-    func removeTopCard() {
+    func removeTopCard(like: Bool) {
+        vote(imageID: catsBuffer[0].cat.id, like: like)
         removeTopImageFromBuffers()
-        if imageBuffer.count < 5 {
-            loadMoreImages()
+        if catsBuffer.count < 5 {
+            fetch(numberOfCats: 10)
         }
     }
 
-    func loadMoreImages() {
+    private func vote(imageID: String, like: Bool) {
+        voteService.vote(imageID: imageID, like: like)
+    }
+
+    func loadMoreCats() {
+        fetch(numberOfCats: 5)
+    }
+
+    private func fetch(numberOfCats: Int) {
         guard !isFetching else { return }
-        fetch()
-    }
-
-    private func fetch() {
         isFetching = true
-        let fetchCatsOperation = FetchCatsOperation(apiKey: self.apiKey,
-                                                    networkProvider: networkProvider)
-        fetchCatsOperation.completionBlock = { [weak self, unowned fetchCatsOperation] in
-            guard let self = self else { return }
-            let groupImagesOperation = GroupImagesOperation()
-            groupImagesOperation.completionBlock = { [unowned groupImagesOperation] in
-                let images = groupImagesOperation.images
-                DispatchQueue.main.async {
-                    self.imageBuffer.append(contentsOf: images)
-                    self.updateBuffer()
-                    self.isFetching = false
-                }
-            }
-            for url in fetchCatsOperation.cats.compactMap({ URL(string: $0.url) }) {
-                let fetchImageOperation = FetchImageOperation(imageURL: url, networkProvider: self.networkProvider)
-                groupImagesOperation.addDependency(fetchImageOperation)
-                self.queue.addOperation(fetchImageOperation)
-            }
-            self.queue.addOperation(groupImagesOperation)
+        catsProvider.provideCats(numberOfCats: 10) { [weak self] catsData in
+            self?.isFetching = false
+            self?.catsBuffer.append(contentsOf: catsData)
+            self?.updateBuffer()
         }
-        queue.addOperation(fetchCatsOperation)
     }
 
     private func removeTopImageFromBuffers() {
-        if !imageBuffer.isEmpty {
-            imageBuffer.removeFirst()
+        if !catsBuffer.isEmpty {
+            catsBuffer.removeFirst()
         }
         if !images.isEmpty {
             images.removeFirst()
@@ -62,13 +50,11 @@ class ViewModel: ObservableObject {
             return
         }
         for i in (images.count ..< 2) {
-            if imageBuffer.count > i {
-                images.append(imageBuffer[i])
+            if catsBuffer.count > i {
+                images.append(catsBuffer[i].image)
             }
         }
     }
 
-    private var apiKey: String {
-        Bundle.main.object(forInfoDictionaryKey: "API_KEY") as! String
-    }
+    
 }

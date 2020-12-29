@@ -16,6 +16,8 @@ struct NetworkProvider {
             case (.some(let data), .some(let response as HTTPURLResponse) , .none):
                 if response.statusCode == 200 {
                     completion(.success(data))
+                } else {
+                    completion(.failure(.invalidResponseError))
                 }
             case (_, _, .some(let error)):
                 completion(.failure(.otherError(error)))
