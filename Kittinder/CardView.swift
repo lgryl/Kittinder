@@ -11,7 +11,9 @@ struct CardView: View {
                 .resizable()
                 .scaledToFill()
                 .frame(minWidth: 0, maxWidth: .infinity)
+                .frame(minHeight: 0, maxHeight: .infinity)
                 .blur(radius: 25.0, opaque: true)
+                
             Image(uiImage: image)
                 .resizable()
                 .scaledToFit()
@@ -23,6 +25,6 @@ struct CardView: View {
 struct CardView_Previews: PreviewProvider {
     static var previews: some View {
         CardView(image: UIImage(named: "a94")!)
-            .frame(width: 300, height: 500)
+            .previewLayout(.fixed(width: 600, height: 300))
     }
 }

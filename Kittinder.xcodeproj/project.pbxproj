@@ -16,6 +16,12 @@
 		CB203D97258F6A9400DF1BBD /* SlideTransitions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB203D96258F6A9400DF1BBD /* SlideTransitions.swift */; };
 		CBE4C5E62591049100BF9F4A /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE4C5E52591049100BF9F4A /* ViewModel.swift */; };
 		CBE4C5E9259105AD00BF9F4A /* NetworkProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE4C5E8259105AD00BF9F4A /* NetworkProvider.swift */; };
+		CBE4C5ED259108F400BF9F4A /* AsynchronousOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE4C5EC259108F400BF9F4A /* AsynchronousOperation.swift */; };
+		CBE4C5F02591091C00BF9F4A /* FetchCatsOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE4C5EF2591091C00BF9F4A /* FetchCatsOperation.swift */; };
+		CBE4C5F42591092F00BF9F4A /* Cat.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE4C5F32591092F00BF9F4A /* Cat.swift */; };
+		CBE4C60225910C1800BF9F4A /* APIKey.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = CBE4C60025910AB100BF9F4A /* APIKey.xcconfig */; };
+		CBE4C60825910EC300BF9F4A /* FetchImageOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE4C60725910EC300BF9F4A /* FetchImageOperation.swift */; };
+		CBE4C60B2591127900BF9F4A /* GroupImagesOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE4C60A2591127900BF9F4A /* GroupImagesOperation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +36,12 @@
 		CB203D96258F6A9400DF1BBD /* SlideTransitions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideTransitions.swift; sourceTree = "<group>"; };
 		CBE4C5E52591049100BF9F4A /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		CBE4C5E8259105AD00BF9F4A /* NetworkProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkProvider.swift; sourceTree = "<group>"; };
+		CBE4C5EC259108F400BF9F4A /* AsynchronousOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsynchronousOperation.swift; sourceTree = "<group>"; };
+		CBE4C5EF2591091C00BF9F4A /* FetchCatsOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchCatsOperation.swift; sourceTree = "<group>"; };
+		CBE4C5F32591092F00BF9F4A /* Cat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cat.swift; sourceTree = "<group>"; };
+		CBE4C60025910AB100BF9F4A /* APIKey.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = APIKey.xcconfig; sourceTree = "<group>"; };
+		CBE4C60725910EC300BF9F4A /* FetchImageOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchImageOperation.swift; sourceTree = "<group>"; };
+		CBE4C60A2591127900BF9F4A /* GroupImagesOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupImagesOperation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +74,9 @@
 		CB203D7B258F5B5600DF1BBD /* Kittinder */ = {
 			isa = PBXGroup;
 			children = (
+				CBE4C60025910AB100BF9F4A /* APIKey.xcconfig */,
+				CBE4C5F22591092900BF9F4A /* Model */,
+				CBE4C5EB259108DF00BF9F4A /* Operations */,
 				CB203D7C258F5B5600DF1BBD /* KittinderApp.swift */,
 				CB203D7E258F5B5600DF1BBD /* ContentView.swift */,
 				CB203D80258F5B5900DF1BBD /* Assets.xcassets */,
@@ -82,6 +97,25 @@
 				CB203D83258F5B5900DF1BBD /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		CBE4C5EB259108DF00BF9F4A /* Operations */ = {
+			isa = PBXGroup;
+			children = (
+				CBE4C5EC259108F400BF9F4A /* AsynchronousOperation.swift */,
+				CBE4C5EF2591091C00BF9F4A /* FetchCatsOperation.swift */,
+				CBE4C60725910EC300BF9F4A /* FetchImageOperation.swift */,
+				CBE4C60A2591127900BF9F4A /* GroupImagesOperation.swift */,
+			);
+			path = Operations;
+			sourceTree = "<group>";
+		};
+		CBE4C5F22591092900BF9F4A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CBE4C5F32591092F00BF9F4A /* Cat.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -142,6 +176,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CB203D84258F5B5900DF1BBD /* Preview Assets.xcassets in Resources */,
+				CBE4C60225910C1800BF9F4A /* APIKey.xcconfig in Resources */,
 				CB203D81258F5B5900DF1BBD /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -155,7 +190,12 @@
 			files = (
 				CBE4C5E9259105AD00BF9F4A /* NetworkProvider.swift in Sources */,
 				CB203D97258F6A9400DF1BBD /* SlideTransitions.swift in Sources */,
+				CBE4C5F42591092F00BF9F4A /* Cat.swift in Sources */,
 				CB203D7F258F5B5600DF1BBD /* ContentView.swift in Sources */,
+				CBE4C60825910EC300BF9F4A /* FetchImageOperation.swift in Sources */,
+				CBE4C60B2591127900BF9F4A /* GroupImagesOperation.swift in Sources */,
+				CBE4C5ED259108F400BF9F4A /* AsynchronousOperation.swift in Sources */,
+				CBE4C5F02591091C00BF9F4A /* FetchCatsOperation.swift in Sources */,
 				CB203D94258F5FCF00DF1BBD /* DragState.swift in Sources */,
 				CB203D91258F5C4200DF1BBD /* CardView.swift in Sources */,
 				CBE4C5E62591049100BF9F4A /* ViewModel.swift in Sources */,
@@ -168,6 +208,7 @@
 /* Begin XCBuildConfiguration section */
 		CB203D86258F5B5900DF1BBD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CBE4C60025910AB100BF9F4A /* APIKey.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -229,6 +270,7 @@
 		};
 		CB203D87258F5B5900DF1BBD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CBE4C60025910AB100BF9F4A /* APIKey.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;

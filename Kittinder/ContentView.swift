@@ -9,7 +9,15 @@ struct ContentView: View {
     var body: some View {
         ZStack {
             if viewModel.images.isEmpty {
-                ProgressView()
+                if viewModel.isFetching {
+                    ProgressView()
+                } else {
+                    Button(action: {
+                        viewModel.fetchIfNotFetching()
+                    }, label: {
+                        Text("Load more")
+                    })
+                }
             }
             ForEach(viewModel.images, id: \.self) { image in
                 CardView(image: image)
@@ -63,7 +71,7 @@ struct ContentView: View {
     }
 
     private func removeCard() {
-        viewModel.images.removeFirst()
+        viewModel.removeTopCard()
     }
 }
 
