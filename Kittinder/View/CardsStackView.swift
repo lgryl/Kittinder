@@ -11,14 +11,14 @@ struct CardsStackView: View {
             CardView(image: image)
                 .overlay(
                     ZStack {
-                        Image(systemName: "heart.fill")
+                        Image(systemName: "heart.circle")
                             .foregroundColor(Color(.systemRed))
-                            .font(.system(size: 75))
-                            .opacity(isTop(image) && dragState.translation.width > 80 ? 0.8 : 0)
-                        Image(systemName: "heart.slash.fill")
+                            .font(.system(size: 120))
+                            .opacity(isTop(image) && dragState.translation.width > 80 ? 0.9 : 0)
+                        Image(systemName: "heart.slash.circle")
                             .foregroundColor(Color(.systemRed))
-                            .font(.system(size: 75))
-                            .opacity(isTop(image) && dragState.translation.width < -80 ? 0.8 : 0)
+                            .font(.system(size: 120))
+                            .opacity(isTop(image) && dragState.translation.width < -80 ? 0.9 : 0)
                     }
                 )
                 .zIndex(isTop(image) ? 1 : 0)

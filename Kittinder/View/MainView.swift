@@ -7,7 +7,7 @@ struct MainView: View {
 
     var body: some View {
         ZStack {
-            if viewModel.images.isEmpty {
+            if viewModel.images.count <= 1 {
                 NoCardsView(viewModel: viewModel)
             }
             CardsStackView(viewModel: viewModel)

@@ -9,11 +9,14 @@ struct NoCardsView: View {
         if viewModel.isFetching {
             ProgressView()
         } else {
-            Button(action: {
-                viewModel.loadMoreCats()
-            }, label: {
-                Text("Load more")
-            })
+            VStack {
+                Text("Error loading cats")
+                Button(action: {
+                    viewModel.loadMoreCats()
+                }, label: {
+                    Text("Try again")
+                })
+            }
         }
     }
 }

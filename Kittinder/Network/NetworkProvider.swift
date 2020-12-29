@@ -3,7 +3,13 @@
 import Foundation
 
 struct NetworkProvider {
-    private let session = URLSession.shared
+    private let session: URLSession = {
+        let configuration = URLSessionConfiguration.default
+        configuration.timeoutIntervalForRequest = 5
+        let session = URLSession(configuration: configuration)
+
+        return session
+    }()
 
     public func fetch(url: URL, completion: @escaping (Result<Data, Error>) -> Void) {
         let request = URLRequest(url: url)

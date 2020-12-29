@@ -13,7 +13,7 @@ struct CardView: View {
                 .frame(minWidth: 0, maxWidth: .infinity)
                 .frame(minHeight: 0, maxHeight: .infinity)
                 .blur(radius: 25.0, opaque: true)
-                
+
             Image(uiImage: image)
                 .resizable()
                 .scaledToFit()

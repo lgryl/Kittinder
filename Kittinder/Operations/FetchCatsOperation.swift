@@ -26,11 +26,11 @@ class FetchCatsOperation: AsynchronousOperation {
         request.addValue(apiKey, forHTTPHeaderField: "x-api-key")
 
         networkProvider.fetch(request: request) { result in
+            defer {
+                self.state = .finished
+            }
             switch result {
             case .success(let data):
-                defer {
-                    self.state = .finished
-                }
                 do {
                     self.cats = try JSONDecoder().decode([Cat].self, from: data)
                 } catch {
