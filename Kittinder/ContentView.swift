@@ -64,6 +64,9 @@ struct ContentView: View {
             }
         }
         .padding()
+        .onAppear {
+            viewModel.fetchIfNotFetching()
+        }
     }
 
     private func isTop(_ image: UIImage) -> Bool {
